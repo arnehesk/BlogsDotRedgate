@@ -20,17 +20,6 @@ GO
 ALTER TABLE [dbo].[Contacts] ADD
 [Linkedin] [nvarchar] (50) COLLATE Latin1_General_CI_AS NULL
 GO
-PRINT N'Refreshing [dbo].[ArticlesPriceList]'
-GO
-EXEC sp_refreshview N'[dbo].[ArticlesPriceList]'
-GO
-PRINT N'Refreshing [dbo].[v_Articles]'
-GO
-EXEC sp_refreshview N'[dbo].[v_Articles]'
-GO
-PRINT N'Refreshing [dbo].[v_Blogs]'
-GO
-EXEC sp_refreshview N'[dbo].[v_Blogs]'
-GO
 UPDATE dbo.Contacts SET Linkedin = 'LinkedIn' WHERE Linkedin IS NULL
 GO
+
