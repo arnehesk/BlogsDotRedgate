@@ -11,7 +11,8 @@ CREATE TABLE [dbo].[Contacts]
 [JoiningDate] [datetime] NULL CONSTRAINT [DF__Contacts__Joinin__1273C1CD] DEFAULT (getdate()),
 [ModifiedDate] [datetime] NULL,
 [Email] [nvarchar] (256) COLLATE Latin1_General_CI_AS NULL,
-[Photo] [image] NULL
+[Photo] [image] NULL,
+[Linkedin] [nvarchar] (50) COLLATE Latin1_General_CI_AS NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [PK__Contacts__912F378B7C53D1A0] PRIMARY KEY CLUSTERED  ([ContactsID]) ON [PRIMARY]

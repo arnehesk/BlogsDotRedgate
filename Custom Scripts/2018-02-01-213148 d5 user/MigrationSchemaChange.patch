@@ -1,0 +1,24 @@
+diff --git a/Tables/dbo.Contacts.sql b/Tables/dbo.Contacts.sql
+index ee500ef..26f9d03 100644
+--- a/Tables/dbo.Contacts.sql
++++ b/Tables/dbo.Contacts.sql
+@@ -11,8 +11,9 @@
+ [JoiningDate] [datetime] NULL CONSTRAINT [DF__Contacts__Joinin__1273C1CD] DEFAULT (getdate()),
+ [ModifiedDate] [datetime] NULL,
+ [Email] [nvarchar] (256) COLLATE Latin1_General_CI_AS NULL,
+-[Photo] [image] NULL
+-) ON [PRIMARY]
++[Photo] [image] NULL,
++[Linkedin] [nvarchar] (50) COLLATE Latin1_General_CI_AS NULL
++) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+ GO
+ ALTER TABLE [dbo].[Contacts] ADD CONSTRAINT [PK__Contacts__912F378B7C53D1A0] PRIMARY KEY CLUSTERED  ([ContactsID]) ON [PRIMARY]
+ GO
+@@ -30,6 +31,6 @@
+ GO
+ EXEC sp_addextendedproperty N'MS_Description', N'When the contact details were last modified', 'SCHEMA', N'dbo', 'TABLE', N'Contacts', 'COLUMN', N'ModifiedDate'
+ GO
+-EXEC sp_addextendedproperty N'MS_Description', N'Photo of contact, especially authors.
++EXEC sp_addextendedproperty N'MS_Description', N'Photo of contact, especially authors.
+ This is now deprecated as the photos are saved as image files outside of the database.', 'SCHEMA', N'dbo', 'TABLE', N'Contacts', 'COLUMN', N'Photo'
+ GO
