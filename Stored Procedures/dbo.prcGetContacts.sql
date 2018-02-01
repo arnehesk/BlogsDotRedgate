@@ -7,8 +7,7 @@ AS
     SELECT Address1 ,
            Address2 ,
            Address3 ,
-           ContactFullName ,
-           LinkedIn ,
+           ContactFullName,
            Email
     FROM   Contacts;
 
