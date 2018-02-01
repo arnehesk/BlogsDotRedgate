@@ -9,5 +9,5 @@ CREATE PROCEDURE [dbo].[prcGetCountries]
  
 -- WITH ENCRYPTION, RECOMPILE, EXECUTE AS CALLER|SELF|OWNER| 'user_name'
 AS
-    SELECT * FROM dbo.CountryCodes
+    SELECT CountryName FROM dbo.CountryCodes
 GO
